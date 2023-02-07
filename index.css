@@ -20,14 +20,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* height: 25vh; */
 }
 .logo {
   position: relative;
   width: 15vw;
   z-index: 2;
 }
-.menu {
+.nav-list {
+  margin: 0;
+}
+.nav-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,7 +94,7 @@ input[type="checkbox"] {
 }
 .courses-desc {
   font-size: 1.5rem;
-  margin-top: 0, 1vw;
+  padding: 0 2vw;
 }
 .courses-subsection {
   display: flex;
@@ -125,9 +127,11 @@ input[type="checkbox"] {
 .student-desc {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .student-text {
   width: 50%;
+  line-height: 2;
 }
 
 /* lorem section */
@@ -136,7 +140,8 @@ input[type="checkbox"] {
 }
 .lorem-text {
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 2;
+  padding: 0 2vw;
 }
 /* footer */
 footer {
@@ -163,7 +168,7 @@ footer {
   .hamburger {
     display: block;
   }
-  .menu {
+  .nav-menu {
     display: none;
     position: absolute;
     left: 0;
@@ -172,15 +177,16 @@ footer {
     text-align: center;
     z-index: 1;
   }
-  input[type="checkbox"]:checked ~ .menu {
+  input[type="checkbox"]:checked ~ .nav-menu {
     display: block;
   }
   .courses-desc {
     font-size: 1rem;
-    margin-top: 0, 1vw;
+    padding: 0 2vw;
   }
   .course {
     width: 400px;
+    padding: 0 2vw;
   }
   .student-desc {
     flex-direction: column;
@@ -191,15 +197,22 @@ footer {
   }
   .courses-subsection {
     justify-content: center;
+    margin: 0.5rem 0;
   }
 }
 
 @media screen and (max-width: 480px) {
-  footer {
-    flex-direction: column;
-    justify-content: center;
+  .logo {
+    width: 20vw;
   }
   .course {
     width: auto;
+  }
+  .courses-subsection {
+    margin: 1rem 0;
+  }
+  footer {
+    flex-direction: column;
+    justify-content: center;
   }
 }
