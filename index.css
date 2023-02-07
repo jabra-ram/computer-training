@@ -3,14 +3,15 @@ body {
   margin-bottom: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .text-center {
   text-align: center;
 }
 
-h1,p {
+h1,
+p {
   margin: 1vw;
 }
 
@@ -26,16 +27,16 @@ header {
   width: 15vw;
   z-index: 2;
 }
-.menu{
+.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
 }
-input[type=checkbox]{
+input[type="checkbox"] {
   display: none;
 }
-.hamburger{
+.hamburger {
   display: none;
   padding: 1vw;
 }
@@ -155,50 +156,50 @@ footer {
 1201px and more —  Extra large screens, TV
  */
 
- @media screen and (max-width:770px) {
+@media screen and (max-width: 770px) {
   .nav__list-link {
     font-size: 1rem;
   }
-    .hamburger{
-      display: block;
-    }
-    .menu{
-      display: none;
-      position: absolute;
-      left:0;
-      right:0;
-      background-color: #fff;
-      text-align: center;
-      z-index: 1;
-    }
-    input[type=checkbox]:checked~.menu{
-      display: block;
-    }
-    .courses-desc {
-      font-size: 1rem;
-      margin-top: 0, 1vw;
-    }
-    .course{
-      width: 400px;
-    }
-    .student-desc{
-      flex-direction: column;
-    }
-    .student-text {
-      width: auto;
-      padding: 1rem;
-    }
-    .courses-subsection{
-      justify-content: center;
-    }
- }
+  .hamburger {
+    display: block;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    text-align: center;
+    z-index: 1;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .courses-desc {
+    font-size: 1rem;
+    margin-top: 0, 1vw;
+  }
+  .course {
+    width: 400px;
+  }
+  .student-desc {
+    flex-direction: column;
+  }
+  .student-text {
+    width: auto;
+    padding: 1rem;
+  }
+  .courses-subsection {
+    justify-content: center;
+  }
+}
 
- @media screen and (max-width:480px) {
+@media screen and (max-width: 480px) {
   footer {
     flex-direction: column;
     justify-content: center;
   }
-  .course{
+  .course {
     width: auto;
   }
- }
+}
