@@ -222,8 +222,14 @@ footer {
   .courses-subsection {
     margin: 1rem 0;
   }
+  .student-heading, .courses-heading, .lorem-heading {
+    font-size: 1.5rem;
+  }
   .student-img {
     width: -webkit-fill-available;
+  }
+  .lorem-heading {
+    font-size: 1.5rem;
   }
   footer {
     flex-direction: column;
