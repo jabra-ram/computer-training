@@ -141,7 +141,6 @@ input[type="checkbox"] {
   font-size: 2rem;
 }
 .lorem-text {
-  font-size: 1rem;
   line-height: 2;
   padding: 0 2vw;
 }
@@ -179,7 +178,7 @@ footer {
     text-align: center;
     z-index: 1;
   }
-  .banner-img{
+  .banner-img {
     bottom: 0;
   }
   input[type="checkbox"]:checked ~ .nav-menu {
@@ -207,16 +206,23 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
   .logo {
     width: 20vw;
   }
   .course {
     width: auto;
   }
+  .courses-desc {
+    font-size: 0.8rem;
+    padding: 0 2vw;
+  }
   .courses-subsection {
     margin: 1rem 0;
   }
-  .student-img{
+  .student-img {
     width: -webkit-fill-available;
   }
   footer {
