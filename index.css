@@ -186,7 +186,7 @@ footer {
   }
   .course {
     width: 400px;
-    padding: 0 2vw;
+    padding: 2vw;
   }
   .student-desc {
     flex-direction: column;
