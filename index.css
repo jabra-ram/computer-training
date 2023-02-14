@@ -14,7 +14,7 @@ header {
   align-items: center;
 }
 nav{
-  margin: 25px 0;
+  margin: 12px 0;
 }
 .logo {
   position: absolute;
@@ -51,7 +51,7 @@ input[type="checkbox"] {
 }
 .nav__list-link:hover {
   color: white;
-  background-color: black;
+  background-color: #2289cb;
 }
 /* banner section */
 .banner-img-div {
@@ -79,10 +79,13 @@ input[type="checkbox"] {
 }
 .banner-btn {
   padding: 1vw;
-  background-color: #2487c7;
+  background-color: #2289cb;
   color: white;
   cursor: pointer;
   border: none;
+}
+.banner-btn:hover{
+  background-color: #0f5dbd;
 }
 /* courses section */
 .courses-heading, .student-heading, .lorem-heading{
@@ -96,7 +99,7 @@ input[type="checkbox"] {
   font-size: 1.2rem;
   padding: 0 2vw;
   line-height: 1.8;
-  margin:0;
+  margin: 0;
 }
 .courses-subsection {
   display: flex;
@@ -169,6 +172,9 @@ footer {
   justify-content: center;
   gap: 10px;
 }
+.icon{
+  width: 25px;
+}
 
 /* media queries 
 320px — 480px: Mobile devices
@@ -178,13 +184,19 @@ footer {
 1201px and more —  Extra large screens, TV
  */
  @media screen and (max-width:2560px) and (min-width:1440px){ 
-    .logo{
-      width: 250px;
-    }
- }
- @media screen and (max-width:1440px){ 
+  html{
+    font-size: 32px;
+  }
   .logo{
-    width: 200px;
+    width: 280px;
+  }
+  .course{
+    width: 700px;
+  }
+ }
+ @media screen and (max-width:1440px) and (min-width:1024px){ 
+  .logo{
+    width: 250px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -201,14 +213,19 @@ footer {
     display: block;
   }
   .nav-menu {
-    display: none;
+    display: block;
     position: absolute;
-    left: 0;
-    right: 0;
+    margin: 0;
+    padding: 10px 0 0 0;
+    left: -105%;
+    top: 0;
+    bottom: 0;
+    width: 50vw;
+    height: 100vh;;
     background-color: #fff;
     text-align: center;
-    z-index: 1;
-    border-bottom: 1px solid #000;
+    z-index: 2;
+    transition: all 200ms ease-in-out;
   }
   .nav__list-link{
     display: block;
@@ -221,7 +238,7 @@ footer {
     bottom: 0;
   }
   input[type="checkbox"]:checked ~ .nav-menu {
-    display: block;
+    left: 0;
   }
   .courses-desc {
     font-size: 1rem;
