@@ -97,6 +97,7 @@ input[type="checkbox"] {
   padding: 0 2vw;
   line-height: 1.8;
   margin: 0;
+  text-align: center;
 }
 .courses-subsection {
   display: flex;
@@ -141,6 +142,7 @@ input[type="checkbox"] {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  font-size: 1.2rem;
 }
 .student-text {
   width: 40%;
@@ -150,6 +152,7 @@ input[type="checkbox"] {
 /* lorem section */
 .lorem-heading {
   font-size: 2rem;
+  margin-bottom: 0;
 }
 .lorem-text {
   line-height: 2;
@@ -196,19 +199,27 @@ footer {
  }
  @media screen and (max-width:1440px) and (min-width:1024px){ 
   html{
-    font-size: 24px;
+    font-size: 16px;
   }
   .logo{
     width: 280px;
   }
   .course{
-    width: 400px;
+    width: 350px;
   }
   .student-text{
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1024px){
+  html{
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 768px) {
+  html{
+    font-size: 16px;
+  }
   .logo{
     width: 150px;
   }
@@ -226,7 +237,7 @@ footer {
     position: absolute;
     margin: 0;
     padding: 10px 0 0 0;
-    left: -105%;
+    left: -100%;
     top: 0;
     bottom: 0;
     width: 50vw;
@@ -250,7 +261,7 @@ footer {
     left: 0;
   }
   .courses-desc {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 1rem;
   }
   .course {
@@ -262,7 +273,7 @@ footer {
     flex-direction: column;
   }
   .student-text {
-    width: 70%;
+    width: 80%;
     padding: 1rem;
     margin-top:0;
     padding-top: 0;
@@ -275,6 +286,7 @@ footer {
     padding: 1rem;
     margin: 0 1rem;
     font-size: 1.1rem;
+    text-align: start;
   }
 }
 @media screen and (max-width: 480px) {
@@ -282,7 +294,16 @@ footer {
     font-size: 14px;
   }
   .logo {
-    width: 28vw;
+    width: 36vw;
+  }
+  .hamburger{
+    font-size: 20px;
+  }
+  .banner-text--heading{
+    font-size: 7vw;
+  }
+  .banner-text--secondary{
+    font-size: 4vw;
   }
   .course {
     width: 70%;
@@ -295,7 +316,7 @@ footer {
     margin: 1rem 0;
   }
   .student-heading, .courses-heading, .lorem-heading {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   .student-img {
     width: 90%;
@@ -310,7 +331,7 @@ footer {
     font-size: 1.5rem;
   }
   .lorem-text {
-    padding: 1rem;
+    padding: 1rem 2rem;
     margin: 0 1rem;
     text-align: start;
     font-size: 1rem;
