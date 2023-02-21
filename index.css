@@ -73,7 +73,7 @@ input[type="checkbox"] {
   margin-bottom: 2.5vw;
 }
 .banner-btn {
-  padding: 1vw;
+  padding: 0.6vw 1vw;
   background-color: #2289cb;
   color: #fff;
   cursor: pointer;
@@ -186,6 +186,9 @@ footer {
   }
   .course {
     width: 700px;
+  }
+  .student-img{
+    width: 30%;
   }
 }
 @media screen and (max-width: 1440px) and (min-width: 1024px) {
