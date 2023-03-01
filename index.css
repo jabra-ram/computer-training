@@ -11,10 +11,12 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  max-width: 1440px;
+  position: relative;
 }
 .logo {
   position: absolute;
-  width: 200px;
+  max-width: 280px;
   z-index: 2;
   top: 0;
   left: 2vw;
@@ -37,13 +39,13 @@ input[type="checkbox"] {
   padding-right: 1rem;
 }
 .nav__list-link {
-  font-size: 1.5vw;
+  font-size: min(1.5vw, 25px);
   font-weight: 600;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #000;
   text-decoration: none;
-  padding: 1vw;
-  margin: 0 2vw;
+  padding: min(1vw,12px);
+  margin: 0 min(2vw, 24px);
 }
 .nav__list-link:hover {
   color: #fff;
@@ -57,23 +59,23 @@ input[type="checkbox"] {
 }
 .banner-text {
   position: absolute;
-  left: 12vw;
-  bottom: 6vw;
+  left: min(12vw, 140px);
+  bottom: min(6vw, 70px);
 }
 .banner-text--heading {
   color: #2289cb;
-  font-size: 4.5vw;
+  font-size: min(4.5vw,65px);
   font-weight: 700;
   margin: 0;
 }
 .banner-text--secondary {
   color: #fff;
-  font-size: 1.5vw;
+  font-size: min(1.5vw,20px);
   margin: 0;
-  margin-bottom: 2.5vw;
+  margin-bottom: min(2.5vw, 35px);
 }
 .banner-btn {
-  padding: 0.6vw 1vw;
+  padding: min(0.6vw,8px) min(1vw,15px);
   background-color: #2289cb;
   color: #fff;
   cursor: pointer;
@@ -86,16 +88,15 @@ input[type="checkbox"] {
 .lorem-heading,
 .student-heading {
   font-size: 2rem;
-  margin: 1vw;
+  margin: min(1vw, 20px);
 }
 .courses-heading {
-  margin-top: 1.5vw;
+  margin-top: min(1.5vw,20px);
 }
 .courses-desc {
   font-size: 1.2rem;
   padding: 1rem 2rem;
   line-height: 1.8;
-  margin: 0 1rem;
   text-align: justify;
 }
 .courses-subsection {
@@ -104,7 +105,6 @@ input[type="checkbox"] {
   text-align: start;
   flex-wrap: wrap;
   padding: 1rem 2rem;
-  margin: 0 1rem;
 }
 .course {
   display: flex;
@@ -133,7 +133,6 @@ input[type="checkbox"] {
 }
 .student-tagline {
   padding: 1rem 2rem;
-  margin: 0 1rem;
   font-size: 1.2rem;
 }
 .student-desc {
@@ -156,7 +155,6 @@ input[type="checkbox"] {
 .lorem-text {
   line-height: 2;
   padding: 1rem 2rem;
-  margin: 0 1rem;
   font-size: 1.1rem;
   text-align: justify;
 }
@@ -177,21 +175,18 @@ footer {
 .icon {
   width: 25px;
 }
-@media screen and (max-width: 2560px) and (min-width: 1430px) {
-  html {
-    font-size: 32px;
-  }
-  .logo {
-    width: 400px;
+/* media queries */
+@media screen and (min-width:1440px) {
+  main, header, footer{
+    max-width: 1440px;
+    margin: auto;
   }
   .course {
-    width: 700px;
-  }
-  .student-img{
-    width: 30%;
+    width: 350px;
   }
 }
-@media screen and (max-width: 1440px) and (min-width: 1024px) {
+
+@media screen and (max-width: 1440px) {
   html {
     font-size: 16px;
   }
@@ -201,13 +196,10 @@ footer {
   .course {
     width: 350px;
   }
-  .student-text {
-    font-size: 1.2rem;
-  }
 }
-@media screen and (max-width: 1024px) {
-  html {
-    font-size: 16px;
+@media screen and (max-width: 1024px){
+  .logo{
+    width: 200px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -220,7 +212,7 @@ footer {
   nav {
     margin: 5px 0;
   }
-  .nav__list-link {
+  .nav__list-link, .student-tagline, .student-text{
     font-size: 1rem;
   }
   .hamburger {
@@ -255,12 +247,12 @@ footer {
     left: 0;
   }
   .courses-desc {
-    font-size: 1.2rem;
-    padding: 1rem;
+    font-size: 1rem;
+    padding: 0 1rem;
   }
   .course {
-    width: 400px;
-    padding: 2vw;
+    width: 300px;
+    padding: min(2vw,24px);
     margin-bottom: 0;
   }
   .student-desc {
@@ -279,7 +271,7 @@ footer {
   .lorem-text {
     padding: 1rem;
     margin: 0 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: justify;
   }
 }
@@ -304,21 +296,32 @@ footer {
   }
   .courses-desc {
     font-size: 1rem;
-    padding: 0 4vw;
+    padding: 0 2rem;
+    margin: 0;
   }
   .courses-subsection {
     margin: 1rem 0;
+    padding: 0;
+    gap: 5px;
+  }
+  .courses-heading{
+    padding: 0.5rem;
   }
   .courses-heading,
   .lorem-heading,
   .student-heading {
     font-size: 1.6rem;
   }
+  .student-heading {
+    padding-top: 1rem;
+    padding-bottom: 0;
+  }
   .student-img {
     width: 90%;
   }
   .student-tagline {
     font-size: 1rem;
+    margin-top: 0;
   }
   .student-text {
     font-size: 1rem;
@@ -329,8 +332,8 @@ footer {
   }
   .lorem-text {
     padding: 1rem 2rem;
-    margin: 0 1rem;
     font-size: 1rem;
+    margin: 0;
   }
   footer {
     flex-direction: column;
