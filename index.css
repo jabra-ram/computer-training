@@ -94,9 +94,10 @@ input[type="checkbox"] {
   margin-top: min(1.5vw,20px);
 }
 .courses-desc {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 1rem 2rem;
   line-height: 1.8;
+  margin: 0;
   text-align: justify;
 }
 .courses-subsection {
@@ -122,6 +123,9 @@ input[type="checkbox"] {
   padding: 0 1vw;
   line-height: 1.8;
 }
+.course-name{
+  font-size: 1rem;
+}
 .student-section {
   background-color: #068abf;
   color: #fff;
@@ -132,20 +136,20 @@ input[type="checkbox"] {
   padding-bottom: 0.8rem;
 }
 .student-tagline {
+  font-size: 1rem;
   padding: 1rem 2rem;
-  font-size: 1.2rem;
 }
 .student-desc {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .student-text {
   width: 40%;
   line-height: 2;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: justify;
 }
 .lorem-heading {
@@ -155,12 +159,12 @@ input[type="checkbox"] {
 .lorem-text {
   line-height: 2;
   padding: 1rem 2rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: justify;
 }
 footer {
   background-color: #000;
-  padding: 0.6rem 3rem;
+  /* padding: 0.6rem 3rem; */
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -175,8 +179,15 @@ footer {
 .icon {
   width: 25px;
 }
+footer span, footer div{
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+}
 /* media queries */
 @media screen and (min-width:1440px) {
+  html{
+    font-size: 22px;
+  }
   main, header, footer{
     max-width: 1440px;
     margin: auto;
@@ -188,7 +199,7 @@ footer {
 
 @media screen and (max-width: 1440px) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
   .logo {
     width: 280px;
@@ -251,7 +262,7 @@ footer {
     padding: 0 1rem;
   }
   .course {
-    width: 300px;
+    width: 260px;
     padding: min(2vw,24px);
     margin-bottom: 0;
   }
@@ -259,13 +270,13 @@ footer {
     flex-direction: column;
   }
   .student-text {
+    font-size: 1rem;
     width: 80%;
     padding: 1rem;
     margin-top: 0;
     padding-top: 0;
   }
   .courses-subsection {
-    justify-content: center;
     margin: 0.5rem 0;
   }
   .lorem-text {
@@ -273,6 +284,11 @@ footer {
     margin: 0 1rem;
     font-size: 1rem;
     text-align: justify;
+  }
+}
+@media screen and (max-width: 635px) {
+  .courses-subsection{
+    justify-content: center;
   }
 }
 @media screen and (max-width: 480px) {
