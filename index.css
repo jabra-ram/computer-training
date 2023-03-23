@@ -122,11 +122,12 @@ input[type="checkbox"] {
   margin: 0;
   padding: 0 1vw;
   line-height: 1.8;
+  font-size: 0.8rem;
 }
 .course-name{
   font-size: 1rem;
 }
-.student-section {
+.student-section-wrapper{
   background-color: #068abf;
   color: #fff;
 }
@@ -166,8 +167,10 @@ input[type="checkbox"] {
   padding-top: 0;
   margin-top: 0;
 }
-footer {
+.footer-wrapper{
   background-color: #000;
+}
+footer {
   padding: 0.3rem 0;
   color: #fff;
   display: flex;
@@ -195,7 +198,7 @@ footer span, footer div{
   html{
     font-size: 22px;
   }
-  main, header, footer{
+  header, .banner-img-div, .courses-section, .student-section, .lorem-ipsum, footer{
     max-width: 1440px;
     margin: auto;
   }
@@ -243,10 +246,13 @@ footer span, footer div{
   .logo {
     width: 150px;
   }
-  nav {
-    margin: 5px 0;
+  .nav-list {
+    margin: 0.6vh 0;
   }
-  .nav__list-link, .student-tagline, .student-text{
+  .nav__list-link{
+    font-size: 0.9rem;
+  }
+  .student-tagline, .student-text{
     font-size: 1rem;
   }
   .banner-img {
@@ -258,7 +264,7 @@ footer span, footer div{
   }
   .course {
     width: 190px;
-    padding: min(1.5vw,24px);
+    padding: min(1rem,24px);
     margin-bottom: 0;
   }
   .student-desc {
@@ -280,16 +286,23 @@ footer span, footer div{
     font-size: 1rem;
     text-align: justify;
   }
-}
-@media screen and (max-width: 635px) {
-  .courses-subsection{
-    justify-content: center;
+  footer span, footer div{
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
   }
+  .social-icons a img{
+    width: 20px;
+  }
+} 
+@media screen and (max-width: 510px){
   .hamburger {
     display: block;
   }
   .course {
     width: 220px;
+  }
+  .courses-subsection{
+    justify-content: center;
   }
   .nav-menu {
     display: block;
@@ -325,6 +338,9 @@ footer span, footer div{
   .logo {
     width: 36vw;
   }
+  .nav-list {
+    margin: 1.5vh 0;
+  }
   .hamburger {
     font-size: 20px;
   }
@@ -333,9 +349,6 @@ footer span, footer div{
   }
   .banner-text--secondary {
     font-size: 4vw;
-  }
-  .course {
-    width: 70%;
   }
   .courses-desc {
     font-size: 1rem;
@@ -346,6 +359,7 @@ footer span, footer div{
     margin: 1rem 0;
     padding: 0;
     gap: 5px;
+    justify-content: center;
   }
   .courses-heading{
     padding: 0.5rem;
@@ -381,5 +395,12 @@ footer span, footer div{
   footer {
     flex-direction: column;
     justify-content: center;
+  }
+  .social-icons{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .social-icons a img{
+    width: 20px;
   }
 }
