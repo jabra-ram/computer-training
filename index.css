@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family:sans-serif;
 }
 .text-center {
   text-align: center;
@@ -187,7 +187,7 @@ footer {
   width: 25px;
 }
 footer span, footer div{
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 0.5rem 2rem;
 }
 .social-icons p{
@@ -215,7 +215,7 @@ footer span, footer div{
     font-size: 18px;
   }
   .logo {
-    width: 280px;
+    width: 230px;
   }
   .course {
     width: 350px;
@@ -297,6 +297,7 @@ footer span, footer div{
 @media screen and (max-width: 510px){
   .hamburger {
     display: block;
+    font-size: 20px;
   }
   .course {
     width: 220px;
