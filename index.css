@@ -20,6 +20,7 @@ header {
   z-index: 2;
   top: 0;
   left: 2vw;
+  box-shadow: 5px 0px 10px rgb(54, 49, 49);
 }
 .nav-list {
   margin: 1.6vh 0;
@@ -75,7 +76,8 @@ input[type="checkbox"] {
   margin-bottom: min(2.5vw, 35px);
 }
 .banner-btn {
-  padding: min(0.6vw,8px) min(1vw,15px);
+  padding: min(0.8vw,10px) min(1vw,16px);
+  font-size: 0.8rem;
   background-color: #2289cb;
   color: #fff;
   cursor: pointer;
@@ -187,7 +189,7 @@ footer {
   width: 25px;
 }
 footer span, footer div{
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   padding: 0.5rem 2rem;
 }
 .social-icons p{
@@ -226,6 +228,9 @@ footer span, footer div{
   }
 }
 @media screen and (max-width: 1024px){
+  .nav__list-link {
+    font-size: min(1.8vw, 30px);
+  }
   .logo{
     width: 200px;
   }
@@ -244,6 +249,7 @@ footer span, footer div{
   }
   .logo {
     width: 150px;
+    z-index: 99;
   }
   .nav-list {
     margin: 0.6vh 0;
@@ -293,7 +299,7 @@ footer span, footer div{
     width: 20px;
   }
 } 
-@media screen and (max-width: 510px){
+@media screen and (max-width: 545px){
   .hamburger {
     display: block;
     font-size: 20px;
@@ -308,13 +314,14 @@ footer span, footer div{
     display: block;
     position: absolute;
     margin: 0;
-    padding: 10px 0 0 0;
+    padding: 40px 0 0 0;
     left: -100%;
-    top: 0;
+    top: 8vh;
     bottom: 0;
-    width: 50vw;
-    height: 100vh;
-    background-color: #fff;
+    width: 100vw;
+    height: 40vh;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgb(98 93 93 / 41%);
     text-align: center;
     z-index: 2;
     transition: all 0.2s ease-in-out;
@@ -329,6 +336,13 @@ footer span, footer div{
   }
   input[type="checkbox"]:checked ~ .nav-menu {
     left: 0;
+  }
+  footer{
+    flex-direction: column;
+  }
+  footer span, footer div{
+    font-size: 1rem;
+    padding: 0.3rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -402,5 +416,9 @@ footer span, footer div{
   }
   .social-icons a img{
     width: 20px;
+  }
+  footer span, footer div{
+    font-size: 1rem;
+    padding: 0.5rem;
   }
 }
