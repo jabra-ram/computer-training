@@ -78,6 +78,7 @@ input[type="checkbox"] {
   margin-bottom: min(2.5vw, 35px);
 }
 .banner-btn {
+  text-decoration: none;
   padding: min(0.8vw,10px) min(1vw,16px);
   font-size: 0.8rem;
   background-color: #2289cb;
